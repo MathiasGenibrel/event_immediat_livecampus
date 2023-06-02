@@ -20,8 +20,8 @@ de lancer le serveur, assurez-vous de configurer les éléments suivants :
   du projet. Voir le fichier `.env.example` pour un exemple de configuration ou voir la section "Configuration de la
   base de donnée" ci-dessous.
 
-- Clé secrète : Générez une clé secrète unique pour votre application Django et définissez-la dans la
-  variable `SECRET_KEY` du fichier `settings.py`.
+- Clé secrète : Générez une clé secrète unique pour votre application Django et définissez-la votre fichier
+  d'environnement `.env`.
 
 - Paramètres spécifiques à l'application : Vérifiez les autres paramètres dans le fichier `settings.py` et modifiez-les
   si nécessaire, en fonction des besoins de votre application.
@@ -61,5 +61,6 @@ mysql -u root -p
 Création de la base de données :
 
 ```sql
-CREATE DATABASE event_immediat;
+CREATE
+DATABASE event_immediat;
 ```
