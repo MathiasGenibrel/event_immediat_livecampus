@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = environment('PROJECT_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = environment('PROJECT_DEBUG')
+DEBUG = environment('PROJECT_DEBUG') or True
 
 ALLOWED_HOSTS = []
 
