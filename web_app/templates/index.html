@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% load static %}
+{% block title %}Event Immediat{% endblock %}
+{% block main %}
+
+  <section class="relative items-center flex flex-col mx-4 py-20 px-10 rounded-2xl text-white overflow-hidden">
+    <img
+      class="absolute inset-0 -z-10 w-full h-full object-cover brightness-75"
+      src="{% static 'images/activity.jpg' %}"
+      alt="Sport background"
+    />
+
+    <h1 class="text-6xl font-medium max-w-1/2 text-center">Find your favorite activity here!</h1>
+    <p>The best price for over 2 million activities worldwide</p>
+
+    <form class="mt-6  p-4 rounded-lg bg-white text-black">
+      <ul class="flex justify-between bg-red-100 px-2 py-2 mb-4 rounded-full">
+        <li class="label-checked:bg-white">
+          <input class="hidden" id="activity-all" type="radio" name="activity" value="all" checked/>
+          <label class="px-4 py-2 rounded-full cursor-pointer" for="activity-all">All
+            activities</label>
+        </li>
+        <li class="h-fit">
+          <input class="hidden" id="activity-sports" type="radio" name="activity" value="sports"/>
+          <label class="label-checked:bg-white px-4 py-2 rounded-full cursor-pointer"
+                 for="activity-sports">Sports</label>
+        </li>
+        <li class="h-fit">
+          <input class="hidden" id="activity-artistic" type="radio" name="activity" value="artistic"/>
+          <label class="label-checked:bg-white px-4 py-2 rounded-full cursor-pointer"
+                 for="activity-artistic">Artistic</label>
+        </li>
+        <li class="h-fit">
+          <input class="hidden" id="activity-travel" type="radio" name="activity" value="travel"/>
+          <label class="label-checked:bg-white px-4 py-2 rounded-full cursor-pointer"
+                 for="activity-travel">Travel</label>
+        </li>
+        <li class="h-fit">
+          <input class="hidden" id="activity-educational" type="radio" name="activity" value="educational"/>
+          <label class="label-checked:bg-white px-4 py-2 rounded-full cursor-pointer" for="activity-educational">Educational</label>
+        </li>
+      </ul>
+      <section class="flex gap-2">
+        <label class="flex-1 block" for="location">
+          <span>Location</span>
+          <input
+            class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            id="location" type="text" placeholder="Type the destination">
+        </label>
+
+        <label class="flex-1 block" for="startDate">
+          <span>Start Date</span>
+          <input
+            class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            id="startDate" type="date" placeholder="Add start date">
+        </label>
+
+        <label class="flex-1 block" for="endDate">
+          <span>End Date</span>
+          <input
+            class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            id="endDate" type="date" placeholder="Add end date">
+        </label>
+
+        <label class="flex-1 block" for="participant">
+          <span>Participant</span>
+          <input
+            class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+            id="participant" type="number" placeholder="Add guests" max="100" min="1">
+        </label>
+      </section>
+
+      <button class="py-2 px-6 text-white font-medium rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+              type="submit">Search Activities
+      </button>
+    </form>
+  </section>
+
+{% endblock %}

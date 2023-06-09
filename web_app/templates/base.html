@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  {% load static %}
+
+  <link rel="stylesheet" href="{% static 'css/output.css' %}"/>
+
+  {% block head %}
+  {% endblock %}
+
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header class="flex items-center justify-between px-8 py-4">
+  <a href="{% url 'web_app:index' %}" class="flex items-center gap-2 cursor-pointer">
+    <img class="w-8" src="{% static 'images/logobrand.png' %}" alt="Event Immediat - Home"/>
+    <span class="font-medium">EventXpress</span>
+  </a>
+
+  <ul class="flex gap-4">
+    <li>
+      <a href="">Explore</a>
+    </li>
+    <li>
+      <a href="">About</a>
+    </li>
+    <li class="bg-black">
+      <hr class="w-0.5">
+    </li>
+    <li>
+      <a href=""
+         class="py-2 px-4 text-white font-medium rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+      >Account</a>
+    </li>
+  </ul>
+</header>
+
+<main>
+  {% block main %}
+  {% endblock %}
+</main>
+
+<footer></footer>
+</body>
+</html>

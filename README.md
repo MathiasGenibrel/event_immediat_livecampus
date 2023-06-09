@@ -44,7 +44,7 @@ touch .env
 Ensuite, nous avons rempli le fichier `.env` avec les variables nécéssaire à votre configuration mysql :
 
 ```shell
-DB_NAME=event_immediat # Le nom de votre base de données
+DB_NAME=event_immediat # Le nom de votre base.html de données
 DB_USER=root
 DB_PASSWORD=root
 DB_HOST=localhost
